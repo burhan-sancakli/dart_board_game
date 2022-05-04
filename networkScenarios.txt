@@ -1,0 +1,12 @@
+Client scenario: client wants to connect to a newly started game.
+	Instructions:
+		+Ask if server exists and can join game (has less than 4 players in it).
+		-Got rejected, restart from above.
+		+Got accepted, it means that he/she has joined the server.
+		*Waiting 1 sec and start the game
+		+Ask to get all previous messages.
+
+Server scenario: a client wants to connect the server.
+	Instructions:
+		+Listen
+		+When a client asks if it can join tell the client he can or cannot based on empty player slot availability (less than 4 players).
